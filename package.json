@@ -1,0 +1,28 @@
+{
+  "name": "jsdf",
+  "version": "0.1.0",
+  "description": "Wrapper for unix df command",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "test_coverage": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "keywords": [
+    "df",
+    "unix",
+    "disk free"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kcwiakala/jsdf.git"
+  },
+  "author": "kcwiakala",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "istanbul": "^0.4.5",
+    "jsmock": "^1.0.0",
+    "mocha": "^4.0.1",
+    "mocha-lcov-reporter": "^1.3.0"
+  }
+}

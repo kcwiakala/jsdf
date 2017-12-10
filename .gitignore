@@ -1,0 +1,20 @@
+# Logs
+logs
+*.log
+*.log.*
+npm-debug.log*
+
+# Coverage report
+coverage
+
+# Jsdoc output
+out
+
+# Dependency directory
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
