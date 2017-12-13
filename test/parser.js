@@ -39,14 +39,14 @@ describe('parser', () => {
       blocks: 8116700,
       used: 187768,
       available: 7928932,
-      capacity: '3%'
+      fill: 0.03
     });
     expect(result['/']).to.deep.equal({
       filesystem: '/dev/sda1',
       blocks: 245084444,
       used: 52346272,
       available: 180218904,
-      capacity: '23%'
+      fill: 0.23
     });
   });
 });
