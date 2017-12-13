@@ -1,6 +1,6 @@
 {
   "name": "jsdf",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Wrapper for unix df command",
   "main": "index.js",
   "scripts": {
