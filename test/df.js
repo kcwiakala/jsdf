@@ -1,26 +1,12 @@
-'use strict';
-
 const expect = require('chai').expect;
 const test = require('./izi-test');
 const Mock = require('jsmock').Mock;
 const child_process = require('child_process');
 
 describe('df', () => {
-  // let mock = new test.Mock(child_process);
-
-  // mock.replace('exec', (command, cb) => {
-  //   mock._command = command;
-  //   cb(mock._error, mock._stdout, mock._stderr);
-  // });
 
   let mock = new Mock(child_process);
   const df = test.rerequire('../lib/df');
-
-  beforeEach(() => {
-    mock._error = null;
-    mock._stdout = null;
-    mock._stderr = null;
-  });
 
   after(() => {
     mock.cleanup();
