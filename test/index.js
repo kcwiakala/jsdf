@@ -1,9 +1,8 @@
 
 const _ = require('lodash');
 const expect = require('chai').expect;
-const test = require('./izi-test');
+const decache = require('decache');
 const {Mock, Matcher} = require('jsmock');
-
 const child_process = require('child_process');
 const parser = require('../lib/parser');
 
@@ -12,8 +11,9 @@ describe('package', () => {
   let cpMock = new Mock(child_process);
   let parserMock = new Mock(parser);
 
-  test.release('../lib/df');
-  let sut = test.rerequire('../index');
+  decache('../lib/df');
+
+  let sut = require('../index');
 
   const result1 = {
     '/': {
