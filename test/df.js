@@ -1,19 +1,17 @@
 const expect = require('chai').expect;
-const test = require('./izi-test');
+const rereq = require('rereq');
 const Mock = require('jsmock').Mock;
-const child_process = require('child_process');
 
 describe('df', () => {
-
-  let mock = new Mock(child_process);
-  const df = test.rerequire('../lib/df');
+  let mock = new Mock(require('child_process'));
+  const df = rereq('../lib/df');
 
   after(() => {
     mock.cleanup();
-    test.release('../lib/df');
   });
 
   it('Should add arguments from the list to the command', (done) => {
+
     mock.expectCall('exec')
       .matching(cmd => cmd === 'df -a -b .')
       .willOnce((args, cb) => cb(null, 'df output', null));
